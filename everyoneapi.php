@@ -49,11 +49,13 @@ class everyoneAPI
 
     public function getData($phone, $datapoints = NULL)
     {
+        // Create the request.
         $request = "https://api.everyoneapi.com/v1/phone/" . urlencode($phone) . "?";
         if($datapoints != NULL){
             $request .= "data=" . $datapoints . "&";
         }
         $request .= "account_sid=" . urlencode($this->account_sid) . "&auth_token=" . urlencode($this->auth_token);
+
         // Init CURL session.
         $session = curl_init($request);
 
