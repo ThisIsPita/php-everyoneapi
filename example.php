@@ -1,4 +1,5 @@
 <?php
+//include everyoneAPI library.
 require_once("everyoneapi.php");
 
 //create everyoneAPI object.
